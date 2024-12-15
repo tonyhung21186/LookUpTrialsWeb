@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>LookUpTrials</title>
+    </head>
+    <body>
+        <h1>LookUpTrials</h1>
+            <a href = "https://apps.apple.com/tt/app/lookuptrials/id1561504716"><img src = "./assests/images/lookUpTrialsLogo.png" height = 150 alt = "LookUpTrials Logo"/></a>
+        <h2>What is LookUpTrials?</h2>
+        <div id="whatIsLookUpTrials-placeholder"></div> <!-- Placeholder for dynamic content -->
+        <script>
+            // JavaScript to dynamically load the content
+            fetch("./public/whatIsLookUpTrials.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('whatIsLookUpTrials-placeholder').innerHTML = data;
+                })
+                .catch(error => console.error('Error loading whatIsLookUpTrials:', error));
+        </script>
+        
+        <h2>LookUpTrials Privacy Policy</h2>
+        <div id="privacy-placeholder"></div> <!-- Placeholder for privacy policy content -->
+    
+        <script>
+            // JavaScript to dynamically load the Privacy Policy content
+            fetch("./public/privacyPolicy.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('privacy-placeholder').innerHTML = data;
+                })
+                .catch(error => console.error('Error loading Privacy Policy content:', error));
+        </script>
+    </body>
+</html>
